@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from .models import Product
-from .forms import ProductsForm
 from django.contrib import messages
+from .forms import ProductsForm
 
 # Create your views here.
 def all_products(request):

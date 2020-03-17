@@ -332,3 +332,9 @@ Working so far -> Pushed to github -> "Working Blank"
 - Pushed to github -> "Modified Products.models and html"
 
 - Created Cart App
+
+Pushed to github -> "Created Cart, need to work on checkout"
+
+- Created Search App
+
+Pushed to github -> "Created Search App"
