@@ -302,3 +302,23 @@ Took me a while to get everything working, many attempts to get it working.  At 
 - Added the ability to pay on my bid.html
 
 - Cant get my bids to talk to my payment properly, might have to go back and start again.
+
+## STARTED PROJECT YET AGAIN
+
+To save time I will copy all my files up until the bid app, this includes all my settings, hidden files etc.
+
+So from the TOP
+
+I have created a project called "popworld"
+
+Copied over the Static, Templates, Media Directories and the eny.py and .gitignore
+
+I copied over the settings.py but removed some of the installed apps.
+
+I have created the following apps "accounts", "home", and "products", I will copy over my previous versions.
+
+Time to Migrate
+
+Created Superuser
+
+Working so far -> Pushed to github -> "Working Blank"

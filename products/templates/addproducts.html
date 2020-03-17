@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load bootstrap_tags %}{% block content %}
+<h1>Add Product</h1>
+<form method="POST" action="{% url 'addproducts' %}" enctype="multipart/form-data" class="accountform">
+    <fieldset class="form-group">
+        {% csrf_token %} {{ APF | as_bootstrap }}
+        <button type="submit" class="btn btn-primary">Add</button>
+    </fieldset>
+</form>
+
+{% endblock content %}
