@@ -338,3 +338,11 @@ Pushed to github -> "Created Cart, need to work on checkout"
 - Created Search App
 
 Pushed to github -> "Created Search App"
+
+- Created Stripe
+
+- Created Checkout App
+
+- Test - Brought a Gohan Product, it says I have Paid and in the Stripe Dashboard I can see the Succeeded Payment.
+
+Pushed to github -> "Created Checkout and Works"
