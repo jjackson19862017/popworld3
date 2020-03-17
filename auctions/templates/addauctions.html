@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% load bootstrap_tags %}{% block content %}
+<h1>Add Auctions</h1>
+<form method="POST" action="{% url 'add_auctions' %}" class="accountform">
+    <fieldset class="form-group">
+        {% csrf_token %} {{ AF | as_bootstrap }}
+        <button type="submit" class="btn btn-primary">Add</button>
+    </fieldset>
+</form>
+{% endblock content %}

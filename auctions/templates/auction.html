@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    <h1>All Auctions</h1>
+
+    {% for auction in auctions %}
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+
+        <div class="block">
+
+            <div class="panel-body">
+                <div class="image">
+                    <img class="product" src="{{ MEDIA_URL }}{{ auction.product_id.image }}">
+                </div>
+
+                <h3>{{ auction.product_id.name }}</h3>
+                <p>Description: <span> {{ auction.product_id.description }} </span></p>
+                <p>Auction Started: <span> {{ auction.start_date }} </span></p>
+                <p>Current Auction Price: <span id="price-highlight"> £ {{ auction.product_id.current_auction_price }} </span></p>
+                <p>End Time: <span> {{ auction.end_time }} </span></p>
+                <p>Status: <span> {{ auction.auction_open }} </span></p>
+
+
+                <form action="{% url 'open_auction' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="hidden" name="product_id" value={{ auction.product_id.id }} />
+                        <input name="UpBid" type="number" min="5" max="9999" class="form-control" placeholder="Enter minimum £ 5">
+                        <span class="input-group-btn"><button class="btn btn-success">Increase Bid</button></span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

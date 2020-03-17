@@ -280,7 +280,7 @@ Took me a while to get everything working, many attempts to get it working.  At 
 
 - Payment for Auctions
 
-- Payment for Buy Now Items
+- Payment for Buy Now Items - Completed
 
 - Only Showing Open Auctions
 
@@ -346,3 +346,10 @@ Pushed to github -> "Created Search App"
 - Test - Brought a Gohan Product, it says I have Paid and in the Stripe Dashboard I can see the Succeeded Payment.
 
 Pushed to github -> "Created Checkout and Works"
+
+- Test - Added a Gohan Product to cart, it says I have 1 in the cart and when I amend to 0, it removes it from the cart.
+
+- Auction and Bidding Setup Time.
+
+- I have set most of the Auction and Bidding up, just need help with putting the winning bid in the cart.
+

@@ -33,27 +33,23 @@
             </div>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_superuser %}
-                <li><a href="{% url 'addproducts' %}"><i class="fa fa-user"></i> Add Products</a></li>
-                <li><a href="/"><i class="fa fa-user"></i> Open Auction</a></li>
+                <li><a href="{% url 'addproducts' %}"><i class="fa fa-user"></i> Admin</a></li>
+                <li><a href="{% url 'add_auctions' %}"><i class="fa fa-user"></i> Start Auction</a></li>
                 {% endif %}{% if user.is_authenticated %}
-                <li><a href="/"><i class="fa fa-user"></i> Open Auctions</a></li>
-                <li><a href="/"><i class="fa fa-user"></i> All Auctions</a></li>
-                <li><a href="/"><i class="fa fa-user"></i> Bids</a></li>
-                <li>
-                    <a href="{% url 'view_cart' %}">
-                        <i class="fa fa-shipping-cart"></i> Cart {% if product_count > 0 %}
-                        <label class="badge badge-warning">{{ product_count }}</label> {% endif %}
-                    </a>
-                </li>
+                <li><a href="{% url 'open_auctions' %}"><i class="fa fa-user"></i> Open Auctions</a></li>
+                <li><a href="{% url 'auctions' %}"><i class="fa fa-user"></i> All Auctions</a></li>
+                <li><a href="{% url 'bid' %}"><i class="fa fa-user"></i> Bids</a></li>
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="{% url 'logout' %}"><i class="fa fa-sign out"></i> Log Out</a></li>
                 {% else %}
                 <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                 <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
-
                 {% endif %}
-
             </ul>
+            <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Product Search" aria-label="Search" name="q">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
