@@ -328,3 +328,7 @@ Working so far -> Pushed to github -> "Working Blank"
 - New Idea, I will do the buy now items first, then work on the Auction part later.
 
 - So I have watched the Code Institute Video again, and added a the option to buy either one or more products.
+
+- Pushed to github -> "Modified Products.models and html"
+
+- Created Cart App

@@ -39,6 +39,12 @@
                 <li><a href="/"><i class="fa fa-user"></i> Open Auctions</a></li>
                 <li><a href="/"><i class="fa fa-user"></i> All Auctions</a></li>
                 <li><a href="/"><i class="fa fa-user"></i> Bids</a></li>
+                <li>
+                    <a href="{% url 'view_cart' %}">
+                        <i class="fa fa-shipping-cart"></i> Cart {% if product_count > 0 %}
+                        <label class="badge badge-warning">{{ product_count }}</label> {% endif %}
+                    </a>
+                </li>
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="{% url 'logout' %}"><i class="fa fa-sign out"></i> Log Out</a></li>
                 {% else %}
