@@ -33,7 +33,7 @@
             </div>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_superuser %}
-                <li><a href="{% url 'addproducts' %}"><i class="fa fa-user"></i> Admin</a></li>
+                <li><a href="{% url 'addproducts' %}"><i class="fa fa-user"></i> Add Products</a></li>
                 <li><a href="/"><i class="fa fa-user"></i> Open Auction</a></li>
                 {% endif %}{% if user.is_authenticated %}
                 <li><a href="/"><i class="fa fa-user"></i> Open Auctions</a></li>

@@ -10,6 +10,17 @@
             <p class="product-description">{{ product.description }}</p>
             <p>Instant Buy Price - {{product.instant_buy_price}}</p>
             <p>This is the {{product.character}} character from the {{product.series}} series</p>
+
+            <form action="{% url 'add_to_cart' product.id %}" method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="number" name="quantity" min="1" max="999" class="form-control" placeholder="Quantity">
+                    <div class="input-group-btn">
+                        <button class="btn btn-success" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </div>
     {% endfor %}

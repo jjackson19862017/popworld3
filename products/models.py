@@ -2,6 +2,17 @@ from django.db import models
 
 # Create your models here.
 class Product(models.Model):
+    BLEACH = 'BLE'
+    DRAGONBALLZ = 'DBZ'
+    SWORDARTONLINE = 'SAO'
+    
+    SERIES_CHOICES = (
+        (BLEACH, 'Bleach'),
+        (DRAGONBALLZ, 'Dragonballz'),
+        (SWORDARTONLINE, 'Sword Art Online'),
+        )
+
+
     name = models.CharField(max_length=254, default= '')
     description = models.TextField()
     original_item_cost = models.DecimalField(max_digits=6, decimal_places=2, default=0)
@@ -13,7 +24,7 @@ class Product(models.Model):
                              blank=True)
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
-    series = models.CharField(max_length=200, default= '')
+    series = models.CharField(max_length=3, choices=SERIES_CHOICES, default= '')
     character = models.CharField(max_length=200, default= '')
     current_auction_price = models.DecimalField(max_digits=4, decimal_places=2, default=0)
 

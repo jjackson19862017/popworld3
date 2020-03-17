@@ -322,3 +322,9 @@ Time to Migrate
 Created Superuser
 
 Working so far -> Pushed to github -> "Working Blank"
+
+- I have updated the products.models, so that we only sell three types of series.
+
+- New Idea, I will do the buy now items first, then work on the Auction part later.
+
+- So I have watched the Code Institute Video again, and added a the option to buy either one or more products.
