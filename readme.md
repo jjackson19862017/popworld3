@@ -363,3 +363,5 @@ I have started to modify the html and css of
 - custom.css
 - index.html
 - products.html
+
+- Added Search into Base.html, but not getting it to work on how it sorts things.  Also tidied up the navbar.
