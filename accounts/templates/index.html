@@ -1,3 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Non-Members Area</h1>
+<div class="callout jumbotron text-center">
+    <div class="container">
+        <h1>Welcome to POP WORLD!</h1>
+        <p>This is your one stop shop, for either <br>purchasing Pop-Vinyls or Bidding for them.</p>
+        <p>You may view our products however, <br> to purchase or bid on them, you must be a member.</p>
+        <hr class='block-divider block-divider--white'>
+        <p><span><a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button"><i class="fa fa-user-plus"></i> Register</a></span> Or <span><a class="btn btn-success btn-lg" href="{% url 'login' %}" role="button"><i class="fa fa-sign-in"></i> Login</a></span></p>
+    </div>
+</div>
 {% endblock content %}

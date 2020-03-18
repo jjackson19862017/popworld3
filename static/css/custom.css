@@ -27,3 +27,102 @@ footer {
     height: 150px;
     margin: 0 auto;
 }
+
+.product--bar {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 270px;
+    margin: 33px 10px 5px;
+}
+
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: #40abe8;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+/* Block-divider */
+
+.block-divider {
+    width: 50%;
+    height: 5px;
+    border: 0;
+    background-color: #444;
+}
+
+.block-divider--blue {
+    background-color: #40abe8;
+}
+
+.block-divider--white {
+    background-color: white;
+}
+
+.block-divider--short {
+    width: 35px;
+}
+
+.block-divider--longer {
+    width: 75%;
+    background-color: #40abe8;
+}
+
+
+/* Sticky Footer - https://css-tricks.com/the-slideout-footer/ */
+
+main {
+    /* make sure to cover the screen */
+    min-height: 100vh;
+    /* need a solid bg to hide the footer */
+    background: white;
+    /* put on top */
+    position: relative;
+    z-index: 1;
+    font: 16px/1.4 system-ui, sans-serif;
+    padding: 2rem;
+}
+
+footer {
+    /* place on the bottom */
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #40abe8;
+    color: white;
+    display: grid;
+    place-items: center;
+    padding: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+li {
+    color: white;
+}
+
+h5 {
+    color: white;
+}
+
+a {
+    color: white;
+}

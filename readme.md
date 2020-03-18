@@ -353,3 +353,13 @@ Pushed to github -> "Created Checkout and Works"
 
 - I have set most of the Auction and Bidding up, just need help with putting the winning bid in the cart.
 
+- I can't get the bid_to_cart to work, so I have booked a mentor to ask for help
+
+### Wednesday 18th March 2020
+
+I have started to modify the html and css of
+
+- base.html
+- custom.css
+- index.html
+- products.html
