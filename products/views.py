@@ -15,8 +15,6 @@ def SAO_products(request):
     return render(request, "products.html", {"products":products})
 
 def addproducts(request):
-    print("Loaded view")
-     
     if request.method == 'POST':
        
         APF = ProductsForm(request.POST, request.FILES)
@@ -24,6 +22,7 @@ def addproducts(request):
         if APF.is_valid():
             APF.save()
             messages.error(request, "Product Added!")
+            APF = ProductsForm()
             return render(request, "addproducts.html", {'APF': APF})
         else:
             messages.error(request, "Unable to ADD this product.")

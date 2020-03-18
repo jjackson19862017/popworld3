@@ -23,7 +23,7 @@ def open_auctions(request):
     """ Creates a view so only registered users can see the auctions that are currently open """
     if request.user.is_authenticated:
         
-        auctions = Auction.objects.filter(auction_open='Open')
+        auctions = Auction.objects.filter(auction_open__iexact='Open')
         return render(request, "auction.html", {"auctions": auctions})
     else:
         messages.error(request, "Im sorry but you need to be logged in")
