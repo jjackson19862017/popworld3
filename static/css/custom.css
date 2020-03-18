@@ -126,3 +126,11 @@ h5 {
 a {
     color: white;
 }
+
+legend {
+    color: white;
+}
+
+p.help-block {
+    color: white;
+}

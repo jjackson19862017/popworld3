@@ -365,3 +365,5 @@ I have started to modify the html and css of
 - products.html
 
 - Added Search into Base.html, but not getting it to work on how it sorts things.  Also tidied up the navbar.
+
+- Used <https://pypi.org/project/django-forms-bootstrap/> to get more information about how to modify the bootstrap forms.

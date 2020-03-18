@@ -9,7 +9,7 @@ class UserLoginForm(forms.Form):
     """
     Form to be used to log users in
     """
-    username_or_email = forms.CharField()
+    username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
 
@@ -29,7 +29,7 @@ class UserRegistrationForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+        fields = ['username',  'password1', 'password2','email','first_name', 'last_name']
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

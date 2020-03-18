@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Product(models.Model):
     BLEACH = 'Bleach'
-    DRAGONBALLZ = 'Dragonball Z'
+    DRAGONBALLZ = 'DragonballZ'
     SWORDARTONLINE = 'Sword Art Online'
     
     SERIES_CHOICES = (

@@ -1,10 +1,13 @@
 {% extends 'base.html' %} {% load bootstrap_tags %}{% block content %}
-<h1>Add Product</h1>
-<form method="POST" action="{% url 'addproducts' %}" enctype="multipart/form-data" class="accountform">
-    <fieldset class="form-group">
-        {% csrf_token %} {{ APF | as_bootstrap }}
-        <button type="submit" class="btn btn-primary">Add</button>
-    </fieldset>
-</form>
-
+<div class="jumbotron text-center">
+    <div class="container">
+        <form method="POST" action="{% url 'addproducts' %}" enctype="multipart/form-data" class="accountform">
+            <fieldset class="form-group">
+                <legend>Add Product</legend>
+                {% csrf_token %} {{ APF | as_bootstrap }}
+                <button type="submit" class="btn btn-lg btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add Product</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
 {% endblock content %}
