@@ -269,36 +269,6 @@ Took me a while to get everything working, many attempts to get it working.  At 
 
 - Finished watching the videos and doing the code, lets see if my on the fly modifications work.
 
-## Things to do
-
-### Backend
-
-- Search for
-    Characters
-    Series
-    Price
-
-- Payment for Auctions
-
-- Payment for Buy Now Items - Completed
-
-- Only Showing Open Auctions
-
-### Frontend
-
-- Html for all the site
-- Css
-- JS
-
-### Deployment
-
-- Heroku
-- Travis
-
-### Testing
-
-- Testing
-
 - Added the ability to pay on my bid.html
 
 - Cant get my bids to talk to my payment properly, might have to go back and start again.
@@ -369,3 +339,43 @@ I have started to modify the html and css of
 - Used <https://pypi.org/project/django-forms-bootstrap/> to get more information about how to modify the bootstrap forms.
 
 - After speaking with my mentor, I have got the Series Searching working now.
+
+### Wednesday 25th March 2020
+
+I hate that the Covid 19 Virus has put my back a week, as I have had to pull extra time to shut down my place of work.
+
+Updated products.html, profile.html, auction.html so that it has now a jumbotron at the top to fall in line with other pages for consistancy.
+
+I'am still working out the issue with the winning bid to checkout. I will attempt to delete the bid_to_cart and start again from a different approach.
+
+
+
+## Things to do
+
+### Backend
+
+- Search for
+    Characters
+    Series - Completed
+    Price
+
+- Payment for Auctions
+
+- Payment for Buy Now Items - Completed
+
+- Only Showing Open Auctions
+
+### Frontend
+
+- Html for all the site
+- Css
+- JS
+
+### Deployment
+
+- Heroku
+- Travis
+
+### Testing
+
+- Testing

@@ -15,6 +15,6 @@ def Bleach_search(request):
     products = Product.objects.filter(series__iexact='Bleach')
     return render(request, "products.html", {"products":products})
 
-def dbz_search(request):
+def DBZ_search(request):
     products = Product.objects.filter(series__iexact='Dragonballz')
     return render(request, "products.html", {"products":products})

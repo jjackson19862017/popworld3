@@ -14,7 +14,7 @@ class Product(models.Model):
 
 
     name = models.CharField(max_length=254, default= '')
-    description = models.TextField()
+    description = models.TextField(max_length=270)
     original_item_cost = models.DecimalField(max_digits=6, decimal_places=2, default=0)
     instant_buy_price = models.DecimalField(max_digits=6, decimal_places=2, default=0)
     reserved_buy_price = models.DecimalField(max_digits=6, decimal_places=2, default=0)

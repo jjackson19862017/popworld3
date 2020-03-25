@@ -19,6 +19,9 @@ footer {
     padding-top: 20px;
 }
 
+
+/* Products */
+
 .product {
     background-size: contain;
     background-position: center center;
@@ -35,6 +38,14 @@ footer {
     width: 270px;
     height: 270px;
     margin: 33px 10px 10px 10px;
+}
+
+.panel {
+    min-height: 550px;
+}
+
+.panel-heading {
+    height: 60px;
 }
 
 

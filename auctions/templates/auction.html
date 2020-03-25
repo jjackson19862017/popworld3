@@ -1,25 +1,31 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}{% block navbar_title %} Pop World - Auctions {% endblock navbar_title %} {% block content %}
 
 <div class="row">
-    <h1>All Auctions</h1>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1>All Auctions</h1>
+            <p>If you wish to Bid on these items you can.<br>Only an Auction has ended and you are the winner.<br>Please head to the Checkout to Claim your Prize.</p>
+        </div>
+    </div>
+
 
     {% for auction in auctions %}
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-primary">
+        <div class="panel-heading text-center">
+            <h3 class="panel-title">{{ auction.product_id.name}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="product" style="background-image: url('{{MEDIA_URL}}{{ auction.product_id.image }}')"></div>
+                <div class="text-center">
+                    <p class="product-description">{{ auction.product_id.description }}</p>
+                    <hr class='block-divider block-divider--longer'>
+                    <p class="product-description">End Time: <span> {{ auction.end_time }} </span></p>
 
-        <div class="block">
-
-            <div class="panel-body">
-                <div class="image">
-                    <img class="product" src="{{ MEDIA_URL }}{{ auction.product_id.image }}">
                 </div>
-
-                <h3>{{ auction.product_id.name }}</h3>
-                <p>Description: <span> {{ auction.product_id.description }} </span></p>
-                <p>Auction Started: <span> {{ auction.start_date }} </span></p>
-                <p>Current Auction Price: <span id="price-highlight"> £ {{ auction.product_id.current_auction_price }} </span></p>
-                <p>End Time: <span> {{ auction.end_time }} </span></p>
-                <p>Status: <span> {{ auction.auction_open }} </span></p>
-
+            </div>
+            <div class="panel-footer">
+                <p class="product-description text-center">Status: <span> {{ auction.auction_open }} </span></p>
 
                 <form action="{% url 'open_auction' %}" method="POST">
                     {% csrf_token %}
@@ -29,7 +35,6 @@
                         <span class="input-group-btn"><button class="btn btn-success">Increase Bid</button></span>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>

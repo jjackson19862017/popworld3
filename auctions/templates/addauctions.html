@@ -1,4 +1,4 @@
- {% extends 'base.html' %} {% load bootstrap_tags %}{% block content %}
+ {% extends 'base.html' %} {% load bootstrap_tags %}{% block navbar_title %} Pop World - Add Auctions {% endblock navbar_title %}{% block content %}
 <div class="jumbotron text-center">
     <div class="container">
         <form method="POST" action="{% url 'add_auctions' %}" class="accountform">

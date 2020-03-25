@@ -20,18 +20,3 @@ def all_bids(request):
         messages.error(request, "You must be Logged in")
         return redirect(reverse('login'))
     return render(request, "bid.html", {"bid": bid})
-
-def bid_to_cart(request, id):
-    """Add a quantity of the specified product to the cart"""
-    quantity = int(request.POST.get('quantity'))
-
-    cart = request.session.get('cart', {bid.id})
-    if id in cart:
-        cart[id] = int(cart[id]) + quantity      
-    else:
-        cart[id] = cart.get(id, quantity) 
-
-    request.session['cart'] = cart
-    return redirect(reverse('all_bids'))
-
-

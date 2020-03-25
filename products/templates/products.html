@@ -1,22 +1,28 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block navbar_title %} Pop World - Products {% endblock navbar_title %} {% block content %}
 <div class="row row-flex">
-    <h1>Pop World Products</h1>
+    <div class="jumbotron text-center">
+        <div class="containter">
+            <h1>Pop World Products</h1>
+            <p>Here is a collection of products we sell here at Pop World.<br>You may buy as many as you like.<br>Once you have made your selection,<br>please goto the checkout and pay for them.</p>
+        </div>
+    </div>
     {% for product in products %}
-    <div class="display panel panel-primary">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-primary">
         <div class="panel-heading text-center">
             <h3 class="panel-title">{{ product.name}}</h3>
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-4 product--bar" style="background-image: url('{{MEDIA_URL}}{{ product.image }}')"></div>
-                <div class="col-md-8 text-center">
+                <div class="product" style="background-image: url('{{MEDIA_URL}}{{ product.image }}')"></div>
+                <div class="text-center">
                     <p class="product-description">{{ product.description }}</p>
                     <hr class='block-divider block-divider--longer'>
-                    <p class="product-description">Instant Buy Price - {{product.instant_buy_price}}</p>
+
                     <p class="product-description">This is the {{product.character}} character from the {{product.series}} series</p>
                 </div>
             </div>
             <div class="panel-footer">
+                <p class="product-description text-center">Instant Buy Price - £{{product.instant_buy_price}}</p>
                 <form action="{% url 'add_to_cart' product.id %}" method="post">
                     {% csrf_token %}
                     <div class="input-group">

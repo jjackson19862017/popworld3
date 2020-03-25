@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load bootstrap_tags %} {% block content %}
+{% extends "base.html" %} {% load bootstrap_tags %} {% block navbar_title %} Pop World - Login {% endblock navbar_title %} {% block content %}
 <div class="jumbotron text-center">
     <div class="container">
         <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
